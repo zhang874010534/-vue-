@@ -1,27 +1,27 @@
 <template>
 	<div class="container">
 		<!-- header -->
-		<mt-header fixed title="H5商城"></mt-header>
+		<mt-header fixed title="特二神商城"></mt-header>
 		<!-- router-view -->
-		1233
+		<router-view></router-view>
 		<!-- tabBar -->
 		<nav class="mui-bar mui-bar-tab">
-			<a href="home.html" class="mui-tab-item mui-active" id="defaultTab">
+			<router-link to="/home" class="mui-tab-item" id="defaultTab" ref="home">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>
-			</a>
-			<a href="message.html" class="mui-tab-item">
-				<span class="mui-icon mui-icon-home"></span>
-				<span class="mui-tab-label">商城</span>
-			</a>
-			<a href="setting.html" class="mui-tab-item">
-				<span class="mui-icon mui-icon-home"><span class="mui-badge">5</span></span>
+			</router-link>
+			<router-link to="/member" class="mui-tab-item">
+				<span class="mui-icon mui-icon-contact mui-icon-icon-contact-filled"></span>
+				<span class="mui-tab-label">会员</span>
+			</router-link>
+			<router-link to="/cart" class="mui-tab-item">
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">0</span></span>
 				<span class="mui-tab-label">购物车</span>
-			</a>
-			<a href="setting.html" class="mui-tab-item">
-				<span class="mui-icon mui-icon-home"><span class="mui-badge">5</span></span>
-				<span class="mui-tab-label">设置</span>
-			</a>
+			</router-link>
+			<router-link to="/search" class="mui-tab-item">
+				<span class="mui-icon mui-icon-search"></span>
+				<span class="mui-tab-label">搜索</span>
+			</router-link>
 		</nav>
 	</div>
 </template>
@@ -31,7 +31,8 @@ export default {
 	data() {
 		return {};
 	},
-	methods: {}
+	methods: {},
+	
 };
 </script>
 

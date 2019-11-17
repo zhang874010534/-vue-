@@ -1,6 +1,7 @@
 
 import Vue from 'vue'
-
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
 
 import app from './App.vue'
 
@@ -9,6 +10,17 @@ import MintUI from 'mint-ui'
 Vue.use(MintUI)
 
 import './lib/mui/css/mui.min.css'
+import './lib/mui/css/icons-extra.css'
+import './lib/mui/fonts/mui-icons-extra.ttf'
+
+//导入router
+import router from './router.js'
+
+//引入axios
+import axios from 'axios'
+Vue.use(axios)
+
+
 var vm=new Vue({
 	el:'#app',
 	data:{
@@ -16,5 +28,7 @@ var vm=new Vue({
 	},
 	render(c) {
 		return c(app)
-	}
+	},
+	router
+	
 })
