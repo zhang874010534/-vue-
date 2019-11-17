@@ -1,7 +1,7 @@
 <template>
 	<div class="container">
 		<!-- header -->
-		<mt-header fixed title="特二神商城"></mt-header>
+		<mt-header fixed title="vue 商城"></mt-header>
 		<!-- router-view -->
 		<router-view></router-view>
 		<!-- tabBar -->

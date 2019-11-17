@@ -23,6 +23,10 @@ module.exports = {
 	],
 	module: { //配置第三方模块加载器
 		rules: [ //匹配规则
+			{
+				test: /\.(html)$/,
+				use: 'html-withimg-loader'
+			},
 			{ //匹配处理.css文件的第三方loader规则
 				test: /\.css$/,
 				use: [{
@@ -53,6 +57,10 @@ module.exports = {
 					loader: "sass-loader" // 将 Sass 编译成 CSS
 				}]
 			},
+			// {
+			// 	test: /\.(png|jpg|gif|jpeg)$/,
+			// 	use:'file-loader'
+			// },
 			{
 				test: /\.(png|jpg|gif)$/,
 				use: [{
@@ -62,10 +70,10 @@ module.exports = {
 					}
 				}]
 			},
-			{// 处理 字体文件的 loader
+			{ // 处理 字体文件的 loader
 				test: /\.(ttf|eot|svg|woff|woff2)$/,
 				use: 'url-loader'
-			}, 
+			},
 			{
 				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,

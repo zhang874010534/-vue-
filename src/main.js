@@ -16,9 +16,10 @@ import './lib/mui/fonts/mui-icons-extra.ttf'
 //导入router
 import router from './router.js'
 
+
 //引入axios
 import axios from 'axios'
-Vue.use(axios)
+Vue.prototype.$axios = axios
 
 
 var vm=new Vue({
