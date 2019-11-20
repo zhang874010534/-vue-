@@ -4,7 +4,6 @@
 		<mt-header fixed title="vue 商城"></mt-header>
 		<!-- router-view -->
 		
-		
 		<transition>
 			<router-view></router-view>
 		</transition>
