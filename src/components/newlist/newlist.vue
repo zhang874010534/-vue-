@@ -5,10 +5,10 @@
 				<a href="javascript:;">
 					<img class="mui-media-object mui-pull-left" :src="item.imgSrc" />
 					<div class="mui-media-body">
-						{{item.title}}
+						{{ item.title }}
 						<p class="mui-ellipsis">
-							<span>{{item.add_time}}</span>
-							<span>{{item.clickNum}}</span>
+							<span>{{ item.add_time }}</span>
+							<span>{{ item.clickNum }}</span>
 						</p>
 					</div>
 				</a>
@@ -25,30 +25,51 @@ export default {
 				{
 					id: 1,
 					title: '睡觉',
-					'add_time': '2019-11-20 15:50',
+					add_time: '2019-11-20 15:50',
 					clickNum: '2',
 					imgSrc: 'https://s2.ax1x.com/2019/11/20/MWOWf1.jpg'
+				},
+				{
+					id: 2,
+					title: '睡觉',
+					add_time: '2019-11-20 15:50',
+					clickNum: '3',
+					imgSrc: 'https://s2.ax1x.com/2019/11/20/MfEdhV.png'
+				},
+				{
+					id: 3,
+					title: '睡觉',
+					add_time: '2019-11-20 15:50',
+					clickNum: '2',
+					imgSrc: 'https://s2.ax1x.com/2019/11/20/MWOWf1.jpg'
+				},
+				{
+					id: 4,
+					title: '睡觉',
+					add_time: '2019-11-20 15:50',
+					clickNum: '3',
+					imgSrc: 'https://s2.ax1x.com/2019/11/20/MfEdhV.png'
 				}
 			]
 		};
 	},
 	created() {
-		this.getNewList();
+		// this.getNewList();
 	},
 	mounted() {},
 	methods: {
-		getNewList() {
-			this.$axios
-				.get('./src/components/newlist/newListData.json')
-				.then(response => {
-					this.newList = response.data.data;
-				})
+		// getNewList() {
+		// 	this.$axios
+		// 		.get('./src/components/newlist/newListData.json')
+		// 		.then(response => {
+		// 			this.newList = response.data.data;
+		// 		})
 
-				.catch(function(error) {
-					// 请求失败处理
-					console.log(error);
-				});
-		}
+		// 		.catch(function(error) {
+		// 			// 请求失败处理
+		// 			console.log(error);
+		// 		});
+		// }
 	}
 };
 </script>
