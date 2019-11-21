@@ -7,6 +7,7 @@
 					<div class="mui-media-body">
 						{{ item.title }}
 						<p class="mui-ellipsis">
+							<!-- <span>{{ item.add_time | dateFormat}}</span> -->
 							<span>{{ item.add_time }}</span>
 							<span>点击 {{ item.clickNum }}次</span>
 						</p>
@@ -25,7 +26,7 @@ export default {
 				{
 					id: 1,
 					title: '睡觉',
-					add_time: '2019-11-20 15:50',
+					add_time: 'Thu Nov 21 2019 09:49:29 GMT+0800',
 					clickNum: '2',
 					imgSrc: 'https://s2.ax1x.com/2019/11/20/MWOWf1.jpg'
 				},
@@ -79,14 +80,14 @@ export default {
 					imgSrc: 'https://s2.ax1x.com/2019/11/20/MfEdhV.png'
 				},
 				{
-					id:9,
+					id: 9,
 					title: '睡觉',
 					add_time: '2019-11-20 15:50',
 					clickNum: '2',
 					imgSrc: 'https://s2.ax1x.com/2019/11/20/MWOWf1.jpg'
 				},
 				{
-					id:10,
+					id: 10,
 					title: '睡觉',
 					add_time: '2019-11-20 15:50',
 					clickNum: '2',
@@ -106,7 +107,6 @@ export default {
 		// 		.then(response => {
 		// 			this.newList = response.data.data;
 		// 		})
-
 		// 		.catch(function(error) {
 		// 			// 请求失败处理
 		// 			console.log(error);
