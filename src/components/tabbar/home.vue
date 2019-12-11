@@ -48,7 +48,10 @@
 export default {
 	data() {
 		return {
-			info: [{ url: 'https://www.taobao.com', image: require('./image/dnf1.jpg') }, { url: 'https://www.baidu.com', image: require('./image/dnf2.jpg') }]
+			info: [
+				{ url: 'https://www.taobao.com', image:'https://s2.ax1x.com/2019/11/17/MrlKiT.jpg' }, 
+				{ url: 'https://www.baidu.com', image:'https://s2.ax1x.com/2019/11/17/MrlnoV.jpg' },
+				]
 		};
 	},
 	methods: {}
