@@ -19,6 +19,8 @@ import router from './router.js'
 //引入axios
 import axios from 'axios'
 Vue.prototype.$axios = axios
+// $axios.defaults.baseUrl=''
+
 
 // //导入moment
 // import moment from 'moment'
