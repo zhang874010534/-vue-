@@ -28,6 +28,11 @@ Vue.prototype.$axios = axios
 // 	return moment(date).format(pattern)
 // })
 
+//导入vant
+import { Tab, Tabs } from 'vant';
+Vue.use(Tab).use(Tabs);
+
+
 var vm = new Vue({
 	el: '#app',
 	data: {

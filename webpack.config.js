@@ -19,7 +19,8 @@ module.exports = {
 			template: path.join(__dirname, './src/index.html'),
 			filename: 'index.html'
 		}),
-		new VueLoaderPlugin()
+		new VueLoaderPlugin(),
+
 	],
 	module: { //配置第三方模块加载器
 		rules: [ //匹配规则
@@ -77,13 +78,8 @@ module.exports = {
 			{
 				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,
-				use: {
-					loader: 'babel-loader',
-					options: {
-						presets: ['@babel/preset-env'],
-						plugins: ['@babel/plugin-proposal-class-properties', '@babel/transform-runtime']
-					}
-				}
+				use:'babel-loader'
+				
 			},
 			{
 				test: /\.vue$/,
