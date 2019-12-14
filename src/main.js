@@ -29,9 +29,10 @@ Vue.prototype.$axios = axios
 // })
 
 //导入vant
-import { Tab, Tabs } from 'vant';
-Vue.use(Tab).use(Tabs);
+import Vant from 'vant';
+import 'vant/lib/index.css';
 
+Vue.use(Vant);
 
 var vm = new Vue({
 	el: '#app',

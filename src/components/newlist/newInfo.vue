@@ -11,7 +11,7 @@
 	</div>
 </template>
  
-<script>
+<script>  
 	import comment from '../subcomponents/comment.vue'
 	export default{
 		data(){
