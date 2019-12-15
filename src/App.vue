@@ -5,7 +5,7 @@
 		<!-- router-view -->
 		
 		<transition>
-			<router-view></router-view>
+			<router-view @getShopNum="getShopNum"></router-view>
 		</transition>
 		<!-- tabBar -->
 		<nav class="mui-bar mui-bar-tab">
@@ -18,7 +18,7 @@
 				<span class="mui-tab-label">会员</span>
 			</router-link>
 			<router-link to="/cart" class="mui-tab-item">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">0</span></span>
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">{{shopNum}}</span></span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link to="/search" class="mui-tab-item">
@@ -32,14 +32,23 @@
 <script>
 export default {
 	data() {
-		return {};
+		return {
+			shopNum:0
+		};
 	},
-	methods: {},
+	methods: {
+		getShopNum(val){
+			this.shopNum=val
+		}
+	},
 	
 };
 </script>
 
 <style scoped>
+	.mui-bar-tab{
+		margin-bottom: -5px;
+	}
 .container {
 	padding-top: 40px;
 	padding-bottom: 60px;

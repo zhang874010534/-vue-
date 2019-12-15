@@ -41,7 +41,6 @@
 			}
 		},
 		created() {
-			console.log(this)
 		},
 		methods:{
 			getList(){
