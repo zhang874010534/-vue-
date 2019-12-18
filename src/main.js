@@ -15,6 +15,29 @@ import './lib/mui/fonts/mui-icons-extra.ttf'
 //导入router
 import router from './router.js'
 
+//导入Vuex
+import Vuex from 'vuex'
+Vue.use(Vuex)
+var store=new Vuex.Store({
+	state:{
+		count:0,
+		shopCart:[]
+	},
+	mutations:{
+		increment(state){
+			state.count++
+		},
+		//将商品添加进购物车
+		addGoods(state,goodsObj){
+			state.shopCart.push(goodsObj)
+		}
+	},
+	getters:{
+		backCount(state){
+			return state.count++
+		}
+	}
+})
 
 //引入axios
 import axios from 'axios'
@@ -42,5 +65,6 @@ var vm = new Vue({
 	render(c) {
 		return c(app)
 	},
-	router
+	router,
+	store
 })

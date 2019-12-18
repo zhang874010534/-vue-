@@ -8,7 +8,7 @@ import newlist from './components/newlist/newlist.vue'
 import newInfo from './components/newlist/newInfo.vue'
 import photolist from './components/photos/photolist.vue'
 import goodslist from './components/goodslist/goodslist.vue'
-import goodsDetail from './components/goodslist/goodsDetail.vue'
+import goodsInfo from './components/goodslist/goodsInfo.vue'
 
 var router = new VueRouter({
 	routes: [
@@ -18,7 +18,7 @@ var router = new VueRouter({
 		{path:'/home/newlist/:id',component:newInfo},
 		{path:'/home/photolist',component:photolist},
 		{path:'/home/goodslist',component:goodslist},
-		{path:'/home/goodslist/:id',component:goodsDetail},
+		{path:'/home/goodslist/:id',component:goodsInfo},
 		{path:'/member',component:member},
 		{path:'/cart',component:cart},
 		{path:'/search',component:search}

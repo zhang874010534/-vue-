@@ -32,7 +32,9 @@
 			},
 			goodsNumUp(){
 				this.goodsNum=parseInt(this.goodsNum)+1
-				
+				// this.$store.commit('increment')
+				// console.log(this.$store.state.count)
+				console.log(this.$store.getters.backCount)
 			}
 		},
 		watch:{
@@ -42,6 +44,7 @@
 		}
 	}
 </script>
+
 <style lang="scss" scoped="scoped">
 	
 	.DetailWrap{
