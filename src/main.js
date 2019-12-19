@@ -18,10 +18,11 @@ import router from './router.js'
 //导入Vuex
 import Vuex from 'vuex'
 Vue.use(Vuex)
+var shopCart=JSON.parse(localStorage.getItem('car')|| '[]');
 var store=new Vuex.Store({
 	state:{
 		count:0,
-		shopCart:[]
+		shopCart:shopCart
 	},
 	mutations:{
 		increment(state){
@@ -30,6 +31,7 @@ var store=new Vuex.Store({
 		//将商品添加进购物车
 		addGoods(state,goodsObj){
 			state.shopCart.push(goodsObj)
+			localStorage.setItem('car',JSON.stringify(state.shopCart))
 		}
 	},
 	getters:{

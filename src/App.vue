@@ -18,7 +18,7 @@
 				<span class="mui-tab-label">会员</span>
 			</router-link>
 			<router-link to="/cart" class="mui-tab-item">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">{{shopNum}}</span></span>
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">{{this.$store.state.shopCart.length}}</span></span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link to="/search" class="mui-tab-item">
@@ -33,13 +33,11 @@
 export default {
 	data() {
 		return {
-			shopNum:0
+			
 		};
 	},
 	methods: {
-		getShopNum(val){
-			this.shopNum=val
-		}
+		
 	},
 	
 };
