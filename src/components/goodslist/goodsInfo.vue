@@ -67,7 +67,7 @@ export default {
 			images: ['https://img.yzcdn.cn/vant/apple-1.jpg', 'https://img.yzcdn.cn/vant/apple-2.jpg'],
 			goodsInfoObj: {
 				id: '',
-				imaSrc: 'https://img.yzcdn.cn/vant/apple-1.jpg',
+				imgSrc: 'https://img.yzcdn.cn/vant/apple-1.jpg',
 				num: 1,
 				txt:''
 			},
@@ -143,7 +143,7 @@ export default {
 		margin: 0.625rem;
 	}
 	//上拉菜单
-	.actionSheet{
+	.act-ionSheet{
 		.header{
 			img{
 				width: 6.875rem;

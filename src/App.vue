@@ -5,7 +5,7 @@
 		<!-- router-view -->
 		
 		<transition>
-			<router-view @getShopNum="getShopNum"></router-view>
+			<router-view></router-view>
 		</transition>
 		<!-- tabBar -->
 		<nav class="mui-bar mui-bar-tab">
