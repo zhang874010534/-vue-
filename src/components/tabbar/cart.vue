@@ -15,8 +15,6 @@
 					</van-checkbox>
 					<div class="deleleButton" @click="del(i)">删除</div>
 				</div>
-				
-				
 			</van-checkbox-group>
 		</div>
 	</div>
@@ -27,7 +25,7 @@ export default {
 	data() {
 		return {
 			shopCart: this.$store.state.shopCart,
-			result: []
+			result: [0]
 		};
 	},
 	mounted() {
