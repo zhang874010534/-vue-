@@ -19,10 +19,12 @@ import router from './router.js'
 import Vuex from 'vuex'
 Vue.use(Vuex)
 var shopCart=JSON.parse(localStorage.getItem('car')|| '[]');
+var result=JSON.parse(localStorage.getItem('result')|| '[]');
 var store=new Vuex.Store({
 	state:{
 		count:0,
-		shopCart:shopCart
+		shopCart:shopCart,
+		result:result
 	},
 	mutations:{
 		increment(state){
@@ -42,6 +44,22 @@ var store=new Vuex.Store({
 				}
 			})
 			localStorage.setItem('car',state.shopCart)
+		},
+		changeCheck(state,i){
+			let indexing;
+			let flag=state.result.some((item,index)=>{
+				if(item==i){
+					indexing=index;
+					return true
+				}
+			})
+			if(flag){
+				state.result.splice(indexing,1)
+			}else{
+				state.result.push(i)
+			}
+			localStorage.setItem('result',JSON.stringify(state.result))
+			
 		}
 	},
 	getters:{

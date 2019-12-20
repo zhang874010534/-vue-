@@ -3,11 +3,11 @@
 		<div class="cartSingle">
 			<van-checkbox-group v-model="result" ref="checkboxGroup">
 				<div v-for="(item,i) in shopCart" :key="i" class="infoWrap" >
-					<van-checkbox :name="i">
+					<van-checkbox :name="i" @click="changeCheck(i)">
 						<div class="vantCheckBox">
 							<img :src="item.imgSrc" alt="">
 							<div class="shopInfo">
-								<p>商品信息</p>
+								<p>商品信息</p>	
 								<p>商品信息</p>
 								<p>商品信息</p>
 							</div>
@@ -25,7 +25,7 @@ export default {
 	data() {
 		return {
 			shopCart: this.$store.state.shopCart,
-			result: [0]
+			result: this.$store.state.result
 		};
 	},
 	mounted() {
@@ -40,6 +40,9 @@ export default {
 		},
 		del(i){
 			this.$store.commit('del',i)
+		},
+		changeCheck(i){
+			this.$store.commit('changeCheck',i)
 		}
 		
 	}
