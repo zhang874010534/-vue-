@@ -32,6 +32,16 @@ var store=new Vuex.Store({
 		addGoods(state,goodsObj){
 			state.shopCart.push(goodsObj)
 			localStorage.setItem('car',JSON.stringify(state.shopCart))
+		},
+		del(state,i){
+			state.shopCart.some((item,index)=>{
+				console.log(1);
+				if(index==i){
+					state.shopCart.splice(i,1)
+					return true;
+				}
+			})
+			localStorage.setItem('car',state.shopCart)
 		}
 	},
 	getters:{

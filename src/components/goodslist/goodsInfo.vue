@@ -57,9 +57,6 @@
 </template>
 
 <script>
-var arr = [1, 2];
-arr[0] = 3;
-console.log(arr);
 export default {
 	data() {
 		return {
@@ -143,7 +140,7 @@ export default {
 		margin: 0.625rem;
 	}
 	//上拉菜单
-	.act-ionSheet{
+	.actionSheet{
 		.header{
 			img{
 				width: 6.875rem;
@@ -153,7 +150,7 @@ export default {
 			.txt{
 				display: inline-block;
 				.price{
-					color: #ff5000;
+					color: red;
 				}
 				.stock{
 					font-size: 0.75rem;
