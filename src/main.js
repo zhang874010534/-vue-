@@ -71,6 +71,7 @@ var store=new Vuex.Store({
 
 //引入axios
 import axios from 'axios'
+Vue.prototype.HOST="/douban_api"
 Vue.prototype.$axios = axios
 // $axios.defaults.baseUrl=''
 
